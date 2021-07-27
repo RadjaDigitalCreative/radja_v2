@@ -39,6 +39,9 @@ Route::group(['middleware' => 'verified', 'auth'], function () {
         Route::get('/report/filter', 'Admin\ReportController@filter')->name('report.filter');
         Route::get('/kas/filter', 'Admin\KasController@filter')->name('kas.filter');
 
+//        is_sales
+        Route::post('/sales', 'Admin\UserController@is_sales')->name('users.sales');
+
         // Route::resource('/profile', 'Admin\ProfileController');
         Route::resource('/category', 'Admin\CategoryController');
         Route::resource('/akses', 'Admin\AksesController');
