@@ -244,6 +244,7 @@ class Order extends Controller
 			'disc' => $request->discount,
 			'created_by'   => $request->created_by,
 			'id_team'   => $request->id_team,
+			'jenis_penjualan'   => $request->jenis_penjualan,
 			'created_at'   => now(),
 			'updated_at'   => now(),
 		]);
