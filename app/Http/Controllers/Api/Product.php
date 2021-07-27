@@ -79,6 +79,32 @@ class Product extends Controller
             'msg' => 'success',
         ], 200);
     }
+    public function jenis_penjualan_create(Request $request)
+    {
+        $jenis_penjualan = DB::table('jenis_penjualan')
+            ->insert([
+                'nama_jenis' => $request->jenis_penjualan,
+                'id_team' => $request->id_team,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        return response()->json([
+            'jenis_penjualan' => $jenis_penjualan,
+            'status_code' => 200,
+            'msg' => 'success',
+        ], 200);
+    }
+    public function jenis_penjualan_delete(Request $request)
+    {
+        $jenis_penjualan = DB::table('jenis_penjualan')
+            ->where('id', $request->id)
+            ->delete();
+        return response()->json([
+            'jenis_penjualan' => $jenis_penjualan,
+            'status_code' => 200,
+            'msg' => 'success',
+        ], 200);
+    }
     public function index(Request $request)
     {
         if (empty($request->lokasi)) {

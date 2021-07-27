@@ -180,6 +180,8 @@ Route::post('/cuti/unapprove', 'Api\Cuti@unapprove');
 
 //jenis_penjualan
 Route::post('/jenis_penjualan', 'Api\Product@jenis_penjualan');
+Route::post('/jenis_penjualan/create', 'Api\Product@jenis_penjualan_create');
+Route::post('/jenis_penjualan/delete', 'Api\Product@jenis_penjualan_delete');
 Route::post('/order/jenis_penjualan', 'Api\Order@jenis_penjualan');
 Route::post('/report/jenis_penjualan', 'Api\Report@jenis_penjualan');
 Route::post('/laba/jenis_penjualan', 'Api\Report@laba_jenis_penjualan');
