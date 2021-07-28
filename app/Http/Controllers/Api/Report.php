@@ -226,7 +226,7 @@ class Report extends Controller
                 , 'payments.name AS payment name', 'orders.name', 'orders.lokasi', 'orders.notelp', 'users.name', 'orders.created_at AS created_at')
             ->addSelect('order_details.product_name')
             ->where('orders.id_team', $request->id_team)
-            ->where('jenis_penjualan', $request->jenis_penjualan)
+
             ->groupBy('order_details.order_id')
             ->get();
         return response()->json([
